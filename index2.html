@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nested{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        .wrapper{
+            display: grid;
+           /* grid-template-columns: 1fr 1fr 1fr;*/
+           grid-template-columns: repeat(3,1fr);
+           grid-gap: 1em;
+           grid-auto-rows: minmax(100px,auto);
+    
+        }
+          .wrapper > div{
+            background: #eee;
+            padding: 1em;
+        }
+        .wrapper > div:nth-child(odd){
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            lorem ipsum dolor sit
+        </div>
+        <div>
+            lorem ipsum dolor sit
+        </div>
+        <div class="nested">
+            <div>lorem </div>
+            <div>lorem</div>
+            <div>lorem</div>
+        </div>
+        <div>
+            lorem ipsum dolor sit
+        </div>
+        <div>
+            lorem ipsum dolor sit
+        </div>
+        <div>
+            lorem ipsum dolor sit
+        </div>
+    </div>
+</body>
+</html>
